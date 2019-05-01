@@ -21,7 +21,7 @@
 #include<openssl/evp.h>
 
 
-uint8_t *hmac(unsigned char *key, int kl, uint64_t interval)
+uint8_t *hmac(const unsigned char *key, int kl, uint64_t interval)
 {
 
     return (uint8_t *)HMAC(EVP_sha1(), key, kl,
